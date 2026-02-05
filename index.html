@@ -319,37 +319,27 @@
         
         <div class="contact-form">
             <h3>Inquiry Form</h3>
-            <form action="#" method="post">
+            <form id="inquiry-form" action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with your Formspree URL -->
+                <input type="hidden" name="_next" value="https://your-github-pages-url.com/#contact"> <!-- Optional: Redirect back to contact section -->
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone">
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit">Send Inquiry</button>
             </form>
+            <div id="form-message" style="display: none; margin-top: 10px; color: green;">Thank you! Your inquiry has been sent successfully.</div>
         </div>
         
         <!-- Google Map with updated coordinates -->
-<section>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.999!2d72.926131206852!3d33.663696239649326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf4b4b4b4b4b%3A0x4b4b4b4b4b4b4b4b!2sTarnol%20Pattak%2C%20F-15%2C%20Jammu%20Kashmir%20Housing%20Scheme%2C%20Islamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-        width="100%" height="300"
-        style="border:0; border-radius: 8px; margin-top: 20px;"
-        allowfullscreen=""
-        loading="lazy">
-    </iframe>
-</section>
+        <section>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.999!2d72.926131206852!3d33.663696239649326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf4b4b4b4b4b%3A0x4b4b4b4b4b4b4b4b!2sTarnol%20Pattak%2C%20F-15%2C%20Jammu%20Kashmir%20Housing%20Scheme%2C%20Islamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                width="100%" height="300"
+                style="border:0; border-radius: 8px; margin-top: 20px;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
 
-    <footer>
-        <p>Ittehad RCC Pipe Factory – Building Strong Foundations for the Future.</p>
     </footer>
-
-    <script>
-        function toggleNav() {
-            const nav = document.getElementById('nav-menu');
-            nav.classList.toggle('active');
-        }
-    </script>
-
-</body>
-
-</html>
+        <p>Ittehad RCC Pipe Factory – Building Strong Foundations for the Future.</p>
