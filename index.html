@@ -18,21 +18,11 @@
             color: white;
             padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 10px 0;
-            font-size: 1.1em;
         }
         nav {
             background-color: #fff;
             padding: 10px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -42,75 +32,16 @@
             text-decoration: none;
             color: #004080;
             font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #0066cc;
-        }
-        /* Hamburger menu for mobile */
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .nav-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: #004080;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                display: none;
-            }
-            nav.active {
-                display: flex;
-            }
-            .nav-toggle {
-                display: flex;
-                position: absolute;
-                top: 10px;
-                right: 20px;
-            }
         }
         section {
             padding: 40px 20px;
             margin: 20px auto;
             max-width: 1200px;
         }
-        .hero {
-            background-image: url('images/hero-rcc-pipe.jpg'); /* Updated to local image */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 64, 128, 0.7);
-        }
-        .hero h2, .hero p {
-            position: relative;
-            z-index: 1;
-        }
-        .hero h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .products, .services {
+        .products {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            justify-content: center;
         }
         .product-item {
             background: white;
@@ -118,10 +49,6 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 20px;
             text-align: center;
-            transition: transform 0.3s;
-        }
-        .product-item:hover {
-            transform: translateY(-5px);
         }
         .product-item img {
             max-width: 100%;
@@ -129,31 +56,12 @@
             object-fit: cover;
             border-radius: 8px;
         }
-        .services ul {
-            list-style: none;
-            padding: 0;
-        }
-        .services li {
-            background: #e6f2ff;
-            margin: 10px 0;
-            padding: 10px;
-            border-left: 5px solid #004080;
-        }
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
             border: 1px solid #ddd;
             border-radius: 4px;
-            box-sizing: border-box;
         }
         .contact-form button {
             background: linear-gradient(135deg, #004080, #0066cc);
@@ -163,36 +71,12 @@
             border-radius: 4px;
             cursor: pointer;
             width: 100%;
-            font-size: 1.1em;
-            transition: background 0.3s;
-        }
-        .contact-form button:hover {
-            background: linear-gradient(135deg, #0066cc, #004080);
         }
         footer {
             background: linear-gradient(135deg, #004080, #0066cc);
             color: white;
             text-align: center;
             padding: 20px;
-            box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
-        }
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            .hero {
-                padding: 60px 20px;
-            }
-            .hero h2 {
-                font-size: 2em;
-            }
-            section {
-                padding: 20px 10px;
-            }
-            .products, .services {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -206,11 +90,6 @@
     </header>
 
     <nav id="nav-menu">
-        <div class="nav-toggle" onclick="toggleNav()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#products">Products</a>
@@ -219,67 +98,30 @@
         <a href="#contact">Contact Us</a>
     </nav>
 
-    <section id="home" class="hero">
+    <section id="home">
         <h2>Welcome to Ittehad RCC Pipe Factory</h2>
-        <p>Ittehad RCC Pipe Factory is a trusted manufacturer and supplier of high-quality Reinforced Cement Concrete (RCC) Pipes, serving infrastructure, housing, and development projects across Pakistan. With a strong focus on quality control, durability, and compliance with international standards, we deliver products that ensure long-term performance and structural reliability.</p>
-        <p>Our modern manufacturing processes, skilled workforce, and strict quality checks make us a reliable partner for contractors, developers, and government projects.</p>
+        <p>Ittehad RCC Pipe Factory is a trusted manufacturer and supplier of high-quality Reinforced Cement Concrete (RCC) Pipes in Pakistan.</p>
     </section>
 
     <section id="about">
         <h2>About Us</h2>
-        <p>Ittehad RCC Pipe Factory is dedicated to building strong foundations for the future. We specialize in producing high-quality RCC pipes and other concrete products that meet international standards. Our commitment to excellence ensures that our products are reliable, durable, and cost-effective for all your infrastructure needs.</p>
-        <img src="images/factory-view.jpg" alt="Factory View" style="max-width: 100%; height: auto; border-radius: 8px; margin-top: 20px;"> <!-- Added local image for factory view -->
+        <p>We specialize in producing high-quality RCC pipes and concrete products that meet international standards.</p>
     </section>
 
     <section id="products">
         <h2>Our Products</h2>
-        <h3>RCC Pipes (International Standards Compliant)</h3>
-        <p>We manufacture RCC Pipes strictly according to ASTM C-76 and BS 5911 standards, ensuring strength, durability, and safety for all applications.</p>
-        
-        <h4>BS 5911 – Class L</h4>
-        <p>Standard Sizes: 6 Inch, 9 Inch</p>
-        <p>Suitable for light drainage, sewerage, and small infrastructure works.</p>
-        
-        <h4>ASTM C-76 – Classes II, III & IV (Wall B)</h4>
-        <p>Standard Sizes: 12 Inch, 15 Inch, 18 Inch, 21 Inch, 24 Inch, 27 Inch, 30 Inch, 33 Inch, 36 Inch, 42 Inch, 48 Inch, 54 Inch, 60 Inch, 66 Inch, 72 Inch</p>
-        <p>Ideal for heavy-duty sewerage systems, storm water drainage, culverts, and large-scale infrastructure projects.</p>
-        
-        <h3>Other Concrete Products</h3>
         <div class="products">
             <div class="product-item">
                 <img src="images/rcc-pipe-6-inch.jpg" alt="RCC Pipe 6 Inch">
                 <h4>RCC Pipe - 6 Inch</h4>
-                <p>BS 5911 – Class L, perfect for light drainage and sewerage.</p>
             </div>
             <div class="product-item">
                 <img src="images/rcc-pipe-9-inch.jpg" alt="RCC Pipe 9 Inch">
                 <h4>RCC Pipe - 9 Inch</h4>
-                <p>BS 5911 – Class L, ideal for small infrastructure works.</p>
-            </div>
-            <div class="product-item">
-                <img src="images/rcc-pipe-large.jpg" alt="RCC Pipe Large">
-                <h4>RCC Pipe - Large Sizes</h4>
-                <p>ASTM C-76 compliant, for heavy-duty applications like culverts.</p>
-            </div>
-            <div class="product-item">
-                <img src="images/rcc-pipe-yard.jpg" alt="RCC Pipe Yard">
-                <h4>RCC Pipe Yard</h4>
-                <p>Our extensive stockyard ensures ready availability for projects.</p>
-            </div>
-            <div class="product-item">
-                <img src="images/kerb-stone.jpg" alt="Kerb Stones">
-                <h4>Kerb Stones</h4>
-                <p>Durable and precision-cast kerb stones suitable for roads, streets, and landscaping projects.</p>
             </div>
             <div class="product-item">
                 <img src="images/manhole-cover.jpg" alt="RCC Manhole Covers">
                 <h4>RCC Manhole Covers</h4>
-                <p>Heavy-duty RCC manhole covers designed for strength, load resistance, and long service life.</p>
-            </div>
-            <div class="product-item">
-                <img src="images/loading-rcc-pipe.jpg" alt="Loading RCC Pipe">
-                <h4>Loading RCC Pipe</h4>
-                <p>Efficient loading and delivery services for your convenience.</p>
             </div>
         </div>
     </section>
@@ -288,58 +130,65 @@
         <h2>Our Services</h2>
         <ul>
             <li>RCC Pipe Manufacturing</li>
-            <li>Custom Orders as per Project Requirements</li>
-            <li>Bulk Supply for Infrastructure Projects</li>
-            <li>On-site Delivery Support</li>
-            <li>Technical Guidance for Product Selection</li>
+            <li>Custom Orders</li>
+            <li>Bulk Supply</li>
+            <li>Delivery Support</li>
         </ul>
     </section>
 
     <section id="brochure">
         <h2>Brochure</h2>
-        <p>Download our product brochure for detailed specifications and information.</p>
-        <a href="placeholder-brochure.pdf" download style="display: inline-block; background: #004080; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">Download PDF Brochure</a>
+        <a href="placeholder-brochure.pdf" download style="background: #004080; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">Download Brochure</a>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>For inquiries, quotations, and orders, feel free to contact us:</p>
-        <p>📍 Address: Tarnol Pattak, F-15, Jammu Kashmir Housing Scheme, Islamabad</p>
-        <p>📞 Phone: 0301-6617604</p>
-        
-        <h3>Why Choose Ittehad RCC Pipe Factory</h3>
-        <ul>
-            <li>✔ Compliance with ASTM C-76 & BS 5911 Standards</li>
-            <li>✔ Wide Range of Standard Sizes</li>
-            <li>✔ High-Strength Reinforced Concrete</li>
-            <li>✔ Competitive Pricing</li>
-            <li>✔ Reliable Supply & Timely Delivery</li>
-            <li>✔ Trusted by Contractors & Developers</li>
-        </ul>
-        
         <div class="contact-form">
             <h3>Inquiry Form</h3>
-            <form id="inquiry-form" action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with your Formspree URL -->
-                <input type="hidden" name="_next" value="https://your-github-pages-url.com/#contact"> <!-- Optional: Redirect back to contact section -->
+
+            <!-- Updated Formspree Form -->
+            <form id="inquiry-form" action="https://formspree.io/f/xreazqyn" method="POST">
+                <input type="hidden" name="_next" value="https://your-github-pages-url.com/#contact">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone">
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit">Send Inquiry</button>
             </form>
-            <div id="form-message" style="display: none; margin-top: 10px; color: green;">Thank you! Your inquiry has been sent successfully.</div>
-        </div>
-        
-        <!-- Google Map with updated coordinates -->
-        <section>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.999!2d72.926131206852!3d33.663696239649326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf4b4b4b4b4b%3A0x4b4b4b4b4b4b4b4b!2sTarnol%20Pattak%2C%20F-15%2C%20Jammu%20Kashmir%20Housing%20Scheme%2C%20Islamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-                width="100%" height="300"
-                style="border:0; border-radius: 8px; margin-top: 20px;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
-        </section>
 
-    </footer>
+            <div id="form-message" style="display: none; margin-top: 10px; color: green;">
+                Thank you! Your inquiry has been sent successfully.
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <p>Ittehad RCC Pipe Factory – Building Strong Foundations for the Future.</p>
+    </footer>
+
+    <!-- JavaScript for Success Message -->
+    <script>
+    const form = document.getElementById('inquiry-form');
+    const msg = document.getElementById('form-message');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            msg.style.display = 'block';
+            form.reset();
+        } else {
+            alert('Oops! Something went wrong. Please try again.');
+        }
+    });
+    </script>
+
+</body>
+</html>
+
